@@ -66,6 +66,7 @@
       "color": "String (Red)",
       "style": "String (Italic)",
       "opacity": "Double (1.0)",
+      "align": "String (center)"
     },
     "background": {
       "color": "String (Red)",
