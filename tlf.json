@@ -1,0 +1,24 @@
+{
+  "info": {
+    "title": "String (Senbonzakura)",
+    "singer": "String (Hatsune Miku)",
+    "composer": "String (Kurousa-P)",
+    "length": "mm:ss.xx (04:05.00)"
+    },
+  "lyric": {
+
+    },
+  "style": {
+    "font": {
+      "family": "String (Times New Roman)",
+      "size": "String (22px)",
+      "color": "String (Red)",
+      "style": "String (Italic)",
+      "opacity": "Double (1.0)",
+      },
+    "background": {
+        "color": "String (Red)",
+        "opacity": "Double (1.0)",
+      }, 
+  } 
+}
