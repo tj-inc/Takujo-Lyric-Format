@@ -3,11 +3,62 @@
     "title": "String (Senbonzakura)",
     "singer": "String (Hatsune Miku)",
     "composer": "String (Kurousa-P)",
-    "length": "mm:ss.xx (04:05.00)"
+    "length": "String, mm:ss.xx (04:05.00)",
+    "display": {
+      // If omitted then info display will be handled by player
+      "start": "String, mm:ss.xx (00:00.00)",
+      "end": "String, mm:ss.xx (01:00.00)",
+      "style": {
+        // If omitted then will use player default
+      }
+    }
+  },
+  "sections": [
+    // Can access each section via corresponding indices 
+    {
+      // Needed to display start signal
+      "start": "String, mm:ss.xx (00:00.00)",
+      "end": "String, mm:ss.xx (01:00.00)",
+      "lines": [
+        // Can be accessed via indices
+        {
+          "start": "String, mm:ss.xx (00:00.00)", // If omitted, will use section starting time
+          "end": "String, mm:ss.xx (00:02.50)", // If omitted, will use next starting time or several ms before next line, dependently
+          "words": "String", // Or an array of words, see below
+          "style": {
+            // Optional, when omitted will use section default
+          }
+        },
+        {
+          "start": "String, mm:ss.xx (00:00.00)",
+          "end": "String, mm:ss.xx (00:02.50)",
+          "words": [
+            {
+              "start": "String, mm:ss.xx (00:00.00)", // If omitted, will use line starting time
+              // No ending time
+              "content": "String",
+              "style": {
+                // Optional, when omitted will use line default
+              }
+            },
+            {
+              // More words
+            }
+          ],
+          "style": {}
+        },
+        {
+          // More lines
+        }
+      ],
+      "style": {
+        // Optional, when omitted will use global default
+      }
     },
-  "lyric": {
-
-    },
+    {
+      // More sections
+    }
+  ],
   "style": {
     "font": {
       "family": "String (Times New Roman)",
@@ -15,10 +66,16 @@
       "color": "String (Red)",
       "style": "String (Italic)",
       "opacity": "Double (1.0)",
-      },
+    },
     "background": {
-        "color": "String (Red)",
-        "opacity": "Double (1.0)",
-      }, 
+      "color": "String (Red)",
+      "padding": "String (0px)",
+      "opacity": "Double (1.0)"
+    }, 
+    "border": {
+      "color": "String (Red)",
+      "width": "String (10px)",
+      "opacity": "Double (1.0)",
+    }
   } 
 }
