@@ -1,13 +1,27 @@
 {
   "info": {
     "title": "String (Senbonzakura)",
-    "singer": "String (Hatsune Miku)",
+    "singer": [
+      {
+        "content": "String (初音ミク)",
+        "language": "jp", //IANA Language Subtag Registry (Tentative)
+      },
+      {
+        "content": "String (初音未来)",
+        "language": "zh-Hans",
+      },
+      {
+        "content": "String (Hatsune Miku)",
+        "language": "en",
+      }
+    ],
     "composer": "String (Kurousa-P)",
-    "length": "String, mm:ss.xx (04:05.00)",
+    "language": "jp",
+    "length": "String, mm:ss.xxx (04:05.000)",
     "display": {
       // If omitted then info display will be handled by player
-      "start": "String, mm:ss.xx (00:00.00)",
-      "end": "String, mm:ss.xx (01:00.00)",
+      "start": "String, mm:ss.xxx (00:00.000)",
+      "end": "String, mm:ss.xxx (01:00.000)",
       "style": {
         // If omitted then will use player default
       }
@@ -17,26 +31,26 @@
     // Can access each section via corresponding indices 
     {
       // Needed to display start signal
-      "start": "String, mm:ss.xx (00:00.00)",
-      "end": "String, mm:ss.xx (01:00.00)",
+      "start": "String, mm:ss.xxx (00:00.000)",
+      "end": "String, mm:ss.xxx (01:00.000)",
       "lines": [
         // Can be accessed via indices
         {
-          "start": "String, mm:ss.xx (00:00.00)", // If omitted, will use section starting time
-          "end": "String, mm:ss.xx (00:02.50)", // If omitted, will use next starting time or several ms before next line, dependently
+          "start": "String, mm:ss.xxx (00:00.000)", // If omitted, will use section starting time
+          "end": "String, mm:ss.xxx (00:02.500)", // If omitted, will use next starting time or several ms before next line, dependently
           "words": "String", // Or an array of words, see below
           "style": {
             // Optional, when omitted will use section default
           }
         },
         {
-          "start": "String, mm:ss.xx (00:00.00)",
-          "end": "String, mm:ss.xx (00:02.50)",
+          "start": "String, mm:ss.xxx (00:00.000)",
+          "end": "String, mm:ss.xxx (00:02.500)",
           "words": [
             {
-              "start": "String, mm:ss.xx (00:00.00)", // If omitted, will use line starting time
+              "start": "String, mm:ss.xxx (00:00.000)", // If omitted, will use line starting time
               // No ending time
-              "content": "String",
+              "contents": "String",
               "style": {
                 // Optional, when omitted will use line default
               }
@@ -77,6 +91,9 @@
       "color": "String (Red)",
       "width": "String (10px)",
       "opacity": "Double (1.0)",
+    },
+    "animation": {
+      // TODO: Define this section
     }
   } 
 }
