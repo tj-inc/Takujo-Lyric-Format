@@ -18,6 +18,14 @@
     "composer": "String (Kurousa-P)",
     "language": "jp",
     "length": "String, mm:ss.xxx (04:05.000)",
+    "display": {
+      // If omitted then info display will be handled by player
+      "start": "String, mm:ss.xxx (00:00.000)",
+      "end": "String, mm:ss.xxx (01:00.000)",
+      "style": {
+        // If omitted then will use player default
+      }
+    }
   },
   "sections": [
     // Can access each section via corresponding indices 
@@ -30,17 +38,10 @@
         {
           "start": "String, mm:ss.xxx (00:00.000)", // If omitted, will use section starting time
           "end": "String, mm:ss.xxx (00:02.500)", // If omitted, will use next starting time or several ms before next line, dependently
-          "words": "String", // Or an array of translations
-        },
-        {
-          "start": "String, mm:ss.xxx (00:00.000)",
-          "end": "String, mm:ss.xxx (00:02.500)",
-          "words": [
-            {
-              "content": "String",
-              "language": "jp",
-            }
-          ]
+          "words": "String", // Or an array of words, see below
+          "style": {
+            // Optional, when omitted will use section default
+          }
         },
         {
           "start": "String, mm:ss.xxx (00:00.000)",
@@ -49,20 +50,50 @@
             {
               "start": "String, mm:ss.xxx (00:00.000)", // If omitted, will use line starting time
               // No ending time
-              "contents": "String", // Or array of translations
+              "contents": "String",
+              "style": {
+                // Optional, when omitted will use line default
+              }
             },
             {
               // More words
             }
           ],
+          "style": {}
         },
         {
           // More lines
         }
       ],
+      "style": {
+        // Optional, when omitted will use global default
+      }
     },
     {
       // More sections
     }
-  ]
+  ],
+  "style": {
+    "font": {
+      "family": "String (Times New Roman)",
+      "size": "String (22px)",
+      "color": "String (Red)",
+      "style": "String (Italic)",
+      "opacity": "Double (1.0)",
+      "align": "String (center)"
+    },
+    "background": {
+      "color": "String (Red)",
+      "padding": "String (0px)",
+      "opacity": "Double (1.0)"
+    }, 
+    "border": {
+      "color": "String (Red)",
+      "width": "String (10px)",
+      "opacity": "Double (1.0)",
+    },
+    "animation": {
+      // TODO: Define this section
+    }
+  } 
 }
