@@ -4,20 +4,20 @@
     "singer": [
       {
         "content": "String (初音ミク)",
-        "language": "jp", //IANA Language Subtag Registry (Tentative Decision)
+        "language": "jp" //IANA Language Subtag Registry (Tentative Decision)
       },
       {
         "content": "String (初音未来)",
-        "language": "zh-Hans",
+        "language": "zh-Hans"
       },
       {
         "content": "String (Hatsune Miku)",
-        "language": "en",
+        "language": "en"
       }
     ],
     "composer": "String (Kurousa-P)",
     "language": "jp",
-    "length": "String, mm:ss.xxx (04:05.000)",
+    "length": "String, mm:ss.xxx (04:05.000)"
   },
   "sections": [
     // Can access each section via corresponding indices 
@@ -30,7 +30,7 @@
         {
           "start": "String, mm:ss.xxx (00:00.000)", // Omit for first line, use section starting time instead
           "end": "String, mm:ss.xxx (00:02.500)", // If omitted, will use next starting time or several ms before next line, dependently; Omit for last line, use section ending time instead.
-          "words": "String", // Or an array of translations
+          "words": "String" // Or an array of translations
         },
         {
           "start": "String, mm:ss.xxx (00:00.000)",
@@ -38,7 +38,7 @@
           "words": [
             {
               "content": "String",
-              "language": "jp",
+              "language": "jp"
             }
           ]
         },
@@ -49,7 +49,7 @@
             {
               "start": "String, mm:ss.xxx (00:00.000)", // Omit for first word, and use line starting time instead
               // No ending time
-              "contents": "String", // Or array of translations
+              "contents": "String" // Or array of translations
             },
             {
               // More words
